@@ -1,1 +1,67 @@
 /* add your CSS here */
+
+h1 {
+    border: 2px solid black;
+    margin: 5px;
+    display: block;
+    text-align: center;
+}
+
+img {
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+body {
+    background: #997300;
+}
+
+ul {
+    /*background: #000000;*/
+    padding: 1px;
+    margin: 5px;
+}
+
+ul li {
+    background: #ffecb3;
+    margin: 5px;
+    list-style-type: none;
+}
+
+li span {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.interesting_fact {
+    text-align: left;
+    color: black;
+    font-style: italic;
+    margin: 5px;
+    padding: 5px;
+}
+
+.description {
+    text-align: left;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.div_style_1 {
+    border: 2px solid black;
+    margin: 5px;
+    width: 600px;
+}
+
+.div_style_2 {
+    border: 2px solid black;
+    margin: 5px;
+    width: 98%;
+    position: center;
+}
+
