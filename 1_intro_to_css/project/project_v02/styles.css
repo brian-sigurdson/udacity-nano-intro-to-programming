@@ -1,0 +1,70 @@
+/* add your CSS here */
+
+h1 {
+    border: 2px solid black;
+    margin: 5px;
+    display: block;
+    text-align: center;
+    background: #2eb82e;
+}
+
+img {
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+body {
+    background: black;
+}
+
+ul {
+    /*background: #000000;*/
+    padding: 1px;
+    margin: 5px;
+}
+
+ul li {
+    background: #e6cbb3;
+    margin: 5px;
+    list-style-type: none;
+}
+
+li span {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.interesting-fact {
+    text-align: left;
+    color: black;
+    font-style: italic;
+    margin: 5px;
+    padding: 5px;
+}
+
+.description {
+    text-align: left;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.outer-border {
+    border: 2px solid black;
+    margin: 5px;
+    width: 600px;
+    background: #ac7139;
+}
+
+.inner-border {
+    border: 2px solid black;
+    margin: 5px;
+    width: 98%;
+    position: center;
+    background: #2eb82e;
+}
+
