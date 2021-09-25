@@ -20,10 +20,10 @@ hs_err_pid*
 *.log
 
 # ide related
-*.idea/
-*.gradle
+.idea
+.gradle
 settings.gradle
-*.iml
+.iml
 
 # temp files
 *.swp
