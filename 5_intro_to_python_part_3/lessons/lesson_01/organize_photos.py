@@ -41,7 +41,8 @@ def organize_photos(directory):
     move_files(originals)
 
 
-# organize_photos("Photos")
-print("TEST")
+if __name__ == '__main__':
+    # organize_photos("Photos")
+    print("TEST")
 
 
