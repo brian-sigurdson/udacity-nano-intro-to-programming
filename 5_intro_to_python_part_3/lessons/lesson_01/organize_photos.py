@@ -2,7 +2,8 @@ import os
 import shutil
 
 
-originals = os.listdir("Photos")
+os.chdir("Photos")
+originals = os.listdir()
 places = []
 
 
@@ -10,7 +11,7 @@ def make_place_directories(the_places):
     # places_set = set(the_places)
 
     for val in the_places:
-        os.mkdir(f"Photos/{val}")
+        os.mkdir(val)
 
 
 def extract_place(string, delimiter):
@@ -24,20 +25,27 @@ def clean_up(the_places):
     places_set = set(the_places)
 
     for val in places_set:
-        shutil.rmtree(f"Photos/{val}")
+        shutil.rmtree(val)
 
 
-def extract_create_move():
-    for file_name in originals:
-        place = extract_place(file_name, "_")
+def extract_filenames():
+    for filename in originals:
+        place = extract_place(filename, "_")
         if place not in places:
             places.append(place)
 
 
-extract_create_move()
+def move_files():
+    for filename in originals:
+        place = extract_place(filename, "_")
+        os.rename(filename, os.path.join(place, filename))
+
+
+extract_filenames()
 make_place_directories(places)
 print(places)
-print(os.listdir("Photos"))
+print(os.listdir())
+move_files()
 
 
 input("Hit any key to cleanup.\n")
