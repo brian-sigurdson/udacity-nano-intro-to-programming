@@ -6,3 +6,4 @@ if __name__ == '__main__':
 if __name__ == 'my_script':
     print("I've been imported.")
 
+print("I run all of the time.")
