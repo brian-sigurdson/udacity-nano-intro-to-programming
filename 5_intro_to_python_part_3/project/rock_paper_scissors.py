@@ -21,6 +21,7 @@ class Game:
     def play_round(self):
         move1 = self.p1.move()
         move2 = self.p2.move()
+        print()
 
         print(f"Player 1: {move1}  Player 2: {move2}")
         result = self.beats(move1, move2)
@@ -38,31 +39,54 @@ class Game:
 
     def play_game(self):
         print("Game start!")
-        for current_round in range(self.max_rounds):
-            print(f"Round {current_round + 1}:")
+        for self.current_round in range(self.max_rounds):
+            print(f"Round {self.current_round + 1}:")
             self.play_round()
             print()
+            self.announce_round_winner()
+            print()
+            self.announce_current_score()
+            print()
+
         print("Game over!\n")
         self.announce_round_winners()
         print()
         self.announce_overall_winner()
 
+    def get_current_score(self):
+        player_1 = self.round_winner.count(1)
+        player_2 = self.round_winner.count(-1)
+        return player_1, player_2
+
+    # list winner for current round
+    def announce_round_winner(self):
+        print("Current Round Results")
+        print("---------------------------")
+        print(f"Round {self.current_round + 1} winner: " +
+              self.get_round_winner_name(self.current_round))
+
+    def announce_current_score(self):
+        print("Current Score")
+        print("---------------------------")
+        player_1, player_2 = self.get_current_score()
+        print(f"Player 1: {player_1}\tPlayer 2: {player_2}")
+
+    # list winner for each round
     def announce_round_winners(self):
         print("Results by Round")
         print("---------------------------")
-        for current_round in range(self.max_rounds):
-            print(f"Round {current_round +1} winner: " +
-                  self.get_round_winner_name(current_round))
+        for the_round in range(self.max_rounds):
+            print(f"Round {the_round + 1} winner: " +
+                  self.get_round_winner_name(the_round))
 
     def announce_overall_winner(self):
-        player_1 = self.round_winner.count(1)
-        player_2 = self.round_winner.count(-1)
+        player_1, player_2 = self.get_current_score()
         if player_1 == player_2:
             print("The players have tied.")
         elif player_1 > player_2:
-            print(f"Player 1 is the winner, with {player_1} wins.")
+            print(f"Player 1 is the winner.")
         else:
-            print(f"Player 2 is the winner, with {player_2} wins.")
+            print(f"Player 2 is the winner.")
 
     def get_round_winner_name(self, game_round):
         if self.round_winner[game_round] == 1:
@@ -80,8 +104,8 @@ class Game:
             # return false => one lost
             # rock beats scissors, scissors beats paper, paper beats rock
             result = ((one == 'rock' and two == 'scissors') or
-                    (one == 'scissors' and two == 'paper') or
-                    (one == 'paper' and two == 'rock'))
+                      (one == 'scissors' and two == 'paper') or
+                      (one == 'paper' and two == 'rock'))
             if result:
                 return 1
             else:
@@ -102,4 +126,3 @@ if __name__ == '__main__':
                 break
         except ValueError:
             print("Please enter an integer value.")
-
