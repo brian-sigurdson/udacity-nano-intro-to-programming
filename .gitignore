@@ -30,3 +30,5 @@ settings.gradle
 
 # exercise folder
 Photos
+
+__pycache__
