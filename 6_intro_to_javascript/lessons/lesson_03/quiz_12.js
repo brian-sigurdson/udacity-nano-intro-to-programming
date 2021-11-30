@@ -1,59 +1,30 @@
 /*
- * Programming Quiz: Murder Mystery (3-4)
+ * Programming Quiz - Checking Your Balance (3-5)
  */
 
 /*
  * QUIZ REQUIREMENTS
- * 1. Your code should have a variables - `room`, `suspect`, `weapon`, and `solved`
- * 2. Your code should include a conditional statement
- * 3. The variable `suspect` should use one of the provided values
- * 4. The variable `weapon` should be based on the `room`
- * 5. Your code should produce the expected output: __________ did it in the __________ with the __________!
- * Example: Mr. Parkes did it in the dining room with the knife!
- *
- * 6. For unmatching combination of the suspect and the room, print nothing on the console
+ * 1. Your code should have the variables `balance`, `checkBalance`, `isActive`
+ * 2. Your code should include an `if...else` conditional statement
+ * 3. Your code should produce the expected output
+ * 4. Your code should not be empty
+ * 5. BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
  */
 
-/* ****************************************** */
-/* TESTING LOGIC */
-// Change the value of `room` and `suspect` to test your code
+// change the values of `balance`, `checkBalance`, and `isActive` to test your code
+var balance = 325.00;
+var checkBalance = true;
+var isActive = false;
 
-// A room can be either of - dining room, gallery, ballroom, or billiards room
-var room = "billiards room";
-
-// A suspect can be either of - Mr. Parkes, Ms. Van Cleve, Mrs. Sparr, or Mr. Kalehoff
-// Test your code by giving matching as well as unmatching names of the suspect
-var suspect = "Mr. Parkes";
-
-/* ****************************************** */
-
-/* IMPLEMENTATION LOGIC*/
-
-// Initial values
-var weapon = "";
-var solved = false;
-
-/*
-* To help solve this mystery, write a combination of conditional statements that:
-* 1. sets the value of weapon based on the room and
-* 2. sets the value of solved to true if the value of room matches the suspect's room
-*/
-if (room == "dining room" && suspect == "Mr. Parkes") {
-    weapon = "knife";
-    solved = true;
-} else if (room == "gallery" && suspect == "Ms. Van Cleve") {
-    weapon = "trophy";
-    solved = true;
-} else if (room == "billiards room" && suspect == "Mrs. Sparr") {
-    weapon = "pool stick";
-    solved = true;
+// your code goes here
+if (!checkBalance) {
+    console.log("Thank you. Have a nice day!");
+} else if (isActive && balance > 0) {
+    console.log("Your balance is $" + balance.toFixed(2) + ".");
+} else if (!isActive) {
+    console.log("Your account is no longer active.");
+} else if (balance === 0) {
+    console.log("Your account is empty.")
 } else {
-    weapon = "poison";
-    solved = true;
+    console.log("Your balance is negative. Please contact bank.");
 }
-/* ****************************************** */
-// The code below will run only when `solved` is true
-if (solved) {
-    console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
-}
-/* ****************************************** */
