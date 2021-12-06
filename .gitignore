@@ -32,3 +32,6 @@ settings.gradle
 Photos
 
 __pycache__
+
+# files cloned for part 6
+course-JS-and-the-DOM/
