@@ -1,5 +1,7 @@
 # udacity-nano-intro-to-programming
-Coursework for the Udacity Intro to Programming Nanodegree.  This course introduced the student to coding in HTML, CSS, Python, Bash, and JavaScript.  
+Coursework for the Udacity Intro to Programming Nanodegree.  
+
+This course introduced the student to coding in HTML, CSS, Python, Bash / Shell / CLI, and JavaScript.  
 
 There were three projects as follows:
 
